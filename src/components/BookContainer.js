@@ -1,6 +1,5 @@
 import React from 'react';
 import BookList from './BookList';
-import InputBook from './InputBook';
 import './BookContainer.css';
 
 class BookContainer extends React.Component {
@@ -37,7 +36,6 @@ class BookContainer extends React.Component {
     return (
       <div>
         <BookList books={books} deleteBookProps={this.delBook} />
-        <InputBook />
       </div>
     );
   }

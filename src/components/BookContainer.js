@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import BookList from './BookList';
 import './BookContainer.css';
-import { removeBook } from '../redux/books/books';
+import { removeBook, addBook } from '../redux/books/books';
 import store from '../redux/configureStore';
 
 const selectBook = (state) => state.books;
@@ -14,7 +14,8 @@ const BookContainer = () => {
     store.dispatch(removeBook(id));
   };
 
-  const addsBook = () => {
+  const addsBook = (bookItem) => {
+    store.dispatch(addBook(bookItem));
   };
 
   return (

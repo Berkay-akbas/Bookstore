@@ -1,10 +1,5 @@
-const ADD = 'ADD_BOOK';
-const REMOVE = 'REMOVE_BOOK';
-
-// function nextBookId(books) {
-//   const maxId = books.reduce((maxId, book) => Math.max(book.id, maxId), -1)
-//   return maxId + 1
-// }
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 const initialState = {
   books: [
@@ -28,20 +23,20 @@ const initialState = {
 
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD:
+    case ADD_BOOK:
       return {
         ...state,
         books: [...state.books, action.payload],
       };
-    case REMOVE:
+    case REMOVE_BOOK:
       return { books: state.books.filter((book) => book.id !== action.payload) };
     default:
       return state;
   }
 };
 
-export const addBook = (book) => ({ type: ADD, payload: book });
+export const addBook = (book) => ({ type: ADD_BOOK, payload: book });
 
-export const removeBook = (id) => ({ type: REMOVE, payload: id });
+export const removeBook = (id) => ({ type: REMOVE_BOOK, payload: id });
 
 export default bookReducer;

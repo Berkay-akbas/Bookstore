@@ -2,19 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   BrowserRouter,
-  Routes,
-  Route,
 } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import App from './App';
+import store from './redux/configureStore';
 // component file
-import Categories from './components/Categories';
+// import Categories from './components/Categories';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/categories" element={<Categories />} />
-    </Routes>
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
 );

@@ -25,9 +25,9 @@ For the live demo click [here]()
 
 To get a local copy up and running follow these simple example steps.
 
-- Clone this repository with git clone`git@github.com:Berkay-akbas/math-magicians-with-react.git` using your terminal or command line.
+- Clone this repository with git clone`git@github.com:Berkay-akbas/Bookstore` using your terminal or command line.
 - Change to the project directory by entering : <br>
-  `cd math-magicians-with-react` in the terminal.
+  `cd Bookstore` in the terminal.
 
 ### Prerequisites
 

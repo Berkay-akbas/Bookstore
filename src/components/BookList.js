@@ -6,6 +6,9 @@ const BookList = (propBooks) => {
   const { books } = propBooks;
   // eslint-disable-next-line
   const deletes = propBooks.deleteBookProps;
+
+  // eslint-disable-next-line
+  const adds = propBooks.addBookProps;
   return (
     <>
       <ul>
@@ -13,7 +16,7 @@ const BookList = (propBooks) => {
           <BookItem key={book.id} book={book} deleteBookProps={deletes} />
         ))}
       </ul>
-      <InputBook />
+      <InputBook addBookProps={adds} />
     </>
   );
 };

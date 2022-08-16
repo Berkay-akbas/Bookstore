@@ -1,43 +1,27 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import BookList from './BookList';
 import './BookContainer.css';
+import { removeBook, addBook } from '../redux/books/books';
+import store from '../redux/configureStore';
 
-class BookContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      books: [
-        {
-          id: 1,
-          title: 'Book number one',
-          author: 'author one',
-        },
-        {
-          id: 2,
-          title: 'Book number two',
-          author: 'author two',
-        },
-        {
-          id: 3,
-          title: 'Book number three',
-          author: 'author three',
-        },
-      ],
-    };
-  }
+const selectBook = (state) => state.books;
 
-  delBook = (id) => {
-    // eslint-disable-next-line
-    console.log('deleted', id);
+const BookContainer = () => {
+  const books = useSelector(selectBook);
+
+  const delBook = (id) => {
+    store.dispatch(removeBook(id));
   };
 
-  render() {
-    const { books } = this.state; // destructuring
-    return (
-      <div>
-        <BookList books={books} deleteBookProps={this.delBook} />
-      </div>
-    );
-  }
-}
+  const addsBook = (bookItem) => {
+    store.dispatch(addBook(bookItem));
+  };
+
+  return (
+    <div>
+      <BookList books={books.books} deleteBookProps={delBook} addBookProps={addsBook} />
+    </div>
+  );
+};
 export default BookContainer;

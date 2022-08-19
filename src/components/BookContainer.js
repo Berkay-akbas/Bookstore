@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import BookList from './BookList';
 import './BookContainer.css';
-import { removeBook, addBook } from '../redux/books/books';
+import { removeBooks, addBook, fetchBooks } from '../redux/books/books';
 
 const selectBook = (state) => state.books;
 
@@ -12,8 +12,12 @@ const BookContainer = () => {
   const dispatch = useDispatch();
 
   const delBook = (id) => {
-    dispatch(removeBook(id));
+    dispatch(removeBooks(id));
   };
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, []);
 
   const addsBook = (bookItem) => {
     dispatch(addBook(bookItem));

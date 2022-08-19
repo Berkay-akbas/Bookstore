@@ -14,7 +14,9 @@ const InputBook = (bookProps) => {
 
   const addBook = (e) => {
     e.preventDefault();
-    const bookItem = { id: uuidv4(), title: book.title, author: book.author };
+    const bookItem = {
+      item_id: uuidv4(), title: book.title, author: book.author, category: 'no_cat',
+    };
     adds(bookItem);
     setBook({ title: '', author: '' });
   };

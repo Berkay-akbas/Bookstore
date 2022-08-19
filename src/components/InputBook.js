@@ -22,10 +22,10 @@ const InputBook = (bookProps) => {
   };
 
   return (
-    <form onSubmit={addBook}>
-      <input type="text" placeholder="Book Title" onChange={bookInput} value={book.title} name="title" />
-      <input type="text" placeholder="Author" onChange={bookInput} value={book.author} name="author" />
-      <button type="submit">Add Book</button>
+    <form className="formSubmit" onSubmit={addBook}>
+      <input type="text" placeholder="Book Title" onChange={bookInput} value={book.title} name="title" className="titleInput" />
+      <input type="text" placeholder="Author" onChange={bookInput} value={book.author} name="author" className="authorInput" />
+      <button className="addButton" type="submit">Add Book</button>
     </form>
   );
 };

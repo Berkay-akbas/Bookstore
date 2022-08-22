@@ -1,3 +1,278 @@
-div {
-  background-color: aliceblue;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f2f3f7;
+  padding: 2.5rem;
+}
+
+.progressCircle {
+  border: 0.2rem solid #0290ff;
+  border-left: 0.2rem solid #e8e8e8;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  transform: rotate(44deg);
+}
+
+.bookItem {
+  display: flex;
+  background-color: #fff;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  padding: 3% 5% 4% 3%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2% 5%;
+}
+
+.progressInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bookCategory {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  color: #121212;
+  margin-right: 0.5rem;
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.bookTitle {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.375rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.bookList ul {
+  padding-top: 1rem;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+.bookAuthor {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.button {
+  background-color: #fff;
+  border: none;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  padding-left: 0;
+  cursor: pointer;
+}
+
+.bookList {
+  background-color: #fafafa;
+  box-shadow: 20px 55px 60px 20px rgba(0, 0, 0, 0.25);
+}
+
+.currentChapter {
+  opacity: 0.5;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.chapter {
+  font-family: "Roboto Slab", serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.progressButton {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  background-color: #0290ff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.percentage {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.completed {
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.percentageContainer {
+  padding: 1rem;
+}
+
+.progchapContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line-2 {
+  height: 4.375rem;
+  border: solid 1px #e8e8e8;
+}
+
+.chapterContainer {
+  padding-left: 2rem;
+}
+
+.line-1 {
+  height: 1.5rem;
+  border: solid 1px #e8e8e8;
+  margin-right: 0.7rem;
+  margin-left: 0.7rem;
+}
+
+.form {
+  margin: 0 5% 0 5%;
+  padding-top: 1rem;
+  border-top: #e8e8e8 solid 1px;
+  padding-bottom: 6rem;
+}
+
+.addText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #121212;
+  opacity: 0.5;
+  margin-bottom: 3%;
+}
+
+.addButton {
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  width: 20%;
+}
+
+.formSubmit {
+  display: flex;
+}
+
+.titleInput {
+  width: 35%;
+  padding-left: 0.5rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  margin-right: 5%;
+}
+
+.authorInput {
+  width: 35%;
+  padding-left: 0.5rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  margin-right: 5%;
+}
+
+::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  opacity: 0.9;
+  color: #c4c4c4;
+}
+
+.construction {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  color: #121212;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.checkButton {
+  font-family: "montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  margin: auto;
+  width: 10%;
+  background-color: #0290ff;
+  color: #fff;
+  border: none;
+}
+
+.categories {
+  text-align: center;
+  margin: 1rem;
 }

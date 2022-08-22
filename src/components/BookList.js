@@ -16,7 +16,11 @@ const BookList = (propBooks) => {
           <BookItem key={book.id} book={book} deleteBookProps={deletes} />
         ))}
       </ul>
-      <InputBook addBookProps={adds} />
+      <div className="line-3" />
+      <div className="form">
+        <div className="addText">ADD NEW BOOK</div>
+        <InputBook addBookProps={adds} />
+      </div>
     </>
   );
 };

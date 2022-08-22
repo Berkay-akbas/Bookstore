@@ -16,7 +16,9 @@ const BookContainer = () => {
   };
 
   useEffect(() => {
-    dispatch(fetchBooks());
+    if (books.books.length === 0) {
+      dispatch(fetchBooks());
+    }
   }, []);
 
   const addsBook = (bookItem) => {
@@ -24,7 +26,7 @@ const BookContainer = () => {
   };
 
   return (
-    <div>
+    <div className="bookList">
       <BookList books={books.books} deleteBookProps={delBook} addBookProps={addsBook} />
     </div>
   );

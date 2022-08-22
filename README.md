@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-For the live demo click [here]()
+For the live demo click [here](https://berkay-bookstore.netlify.app/)
 
 ## Authors
 
